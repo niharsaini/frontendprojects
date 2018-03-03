@@ -1,0 +1,151 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+/*
+------------------------
+------------------------
+
+COMMON
+
+------------------------
+------------------------
+*/
+
+body{
+margin:0;
+
+font-family: 'Open Sans', sans-serif;
+}
+
+
+/*
+------------------------
+------------------------
+
+HEADER
+
+------------------------
+------------------------
+*/
+
+#header{
+
+  background-color: navy;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+}
+
+ul#menu{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+}
+ul#menu li{
+  float: left;
+  padding: 20px 0 0 0;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+li.jo a{
+
+color: white;
+text-decoration: none;
+  padding-left:38px;
+}
+
+li.jo{
+  width: 60%;
+  text-align: left;
+}
+
+
+li.link a{
+
+  color: white;
+  text-decoration: none;
+
+
+}
+
+li.link{
+  width: 10%;
+  text-align: center;
+
+}
+
+li.jo a:hover , li.link a:hover{
+
+color: lightcyan;
+
+}
+
+
+
+
+
+
+/*
+------------------------
+------------------------
+
+Contents
+
+------------------------
+------------------------
+*/
+
+#contents{
+
+  width: 40%;
+  margin: 0 auto;
+  padding: 10px 0 130px 0;
+
+}
+
+h1{
+
+  padding-top:180px;
+
+}
+.top{
+  bottom:50px;
+  right:50px;
+  position: fixed;
+  z-index: 180;
+  color: navy;
+}
+
+
+
+
+
+/*
+------------------------
+------------------------
+
+FOOTER
+
+------------------------
+------------------------
+*/
+
+
+
+
+
+#footer{
+  background-color:navy;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  position: fixed;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  padding-top:6px; 
+}

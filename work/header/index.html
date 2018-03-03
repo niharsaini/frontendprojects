@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>fixed header</title>
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+    <div id="header">
+      <ul id="menu">
+        <li class="jo"><a href="index.html">VAIOTI  </a></li>
+<li class="link"><a href="#tip1">&raquo;TIP NO.1</a></li>
+<li class="link"><a href="#tip2">&raquo;TIP NO.2</a></li>
+<li class="link"><a href="#tip3">&raquo;TIP NO.3</a></li>
+<li class="link"><a href="#tip4">&raquo;TIP NO.4</a></li>
+
+
+      </ul>
+    </div>
+    <div id="contents">
+<h1 id="tip1">TIP N0.1</h1>
+
+
+ <p>
+ It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by acc.
+ </p>
+
+
+
+ <h1 id="tip2">TIP NO.2</h1>
+<p>If you try to change the environment single-handedly, the chances are you will fail. Instead, change yourself to suit your environment. As you do this, even the environment, which has been unfriendly to you, will mysteriously change and seem congenial.
+We all have experienced how jealousy can disturb our peace of mind. You know that you work harder than your colleagues in the office, but sometimes they get promotions; you do not. You started a business several years ago, but you are not as successful as your neighbor whose business is only one year old. There are several examples like these in everyday life. Should you be jealous? No. Remember everybody’s life is shaped by his/her destiny, which has now become his/her reality. If you are destined to be rich, nothing in the world can stop you. If you are not so destined, no one can help you either. Nothing will be gained by blaming others for your misfortune. Jealousy will not get you anywhere; it will only take away your peace of mind.
+</p>
+
+<h1 id="tip3">TIP NO.3</h1>
+<p>
+  This world is full of selfish people. They seldom praise anybody without selfish motives. They may praise you today because you are in power, but no sooner than you are powerless, they will forget your achievement and will start finding faults in you. Why do you wish to kill yours lf in striving for their recognition? Their recognition is not worth the aggravation. Do your duties ethically and sincerely.
+  Forgive And Forget:
+ This is the most powerful aid to peace of mind. We often develop ill feelings inside our heart for the person who insults us or harms us. We nurture grievances. This in turn results in loss of sleep, development of stomach ulcers, and high blood pressure. This insult or injury was done once, but nourishing of grievance goes on forever by constantly remembering it. Get over this bad habit. Life is too short to waste in such trifles. Forgive,20Forget, and march on. Love flourishes in giving and forgiving.
+</p>
+<h1 id="tip4">TIP NO.4</h1>
+<p>
+Most of us create our own problems by interfering too often in others’ affairs. We do so because somehow we have convinced ourselves that our way is the best way, our logic is the perfect logic and those who do not conform to our thinking must be criticized and steered to the right  direction, our direction. This thinking denies the existence of individuality and consequently the existence of God.. God has created each one of us in a unique way. No two human beings can think or act in exactly the same way. All men or women act the way they do because God within them prompts them that way. Mind your own business and you will keep your peace.
+If you’re not where you want to be right now, take the time to visualize yourself in the place you want to be and take the first step in that direction.  You may not be able to change your destination in a day, but you can change your direction right now.
+
+Keep moving along this new path and it will eventually lead you to your destination.
+</p>
+
+    </div>
+
+    <a href="#contents" class="top">&#9654; Top</a>
+    <div id="footer">
+&copy; jojo All rights reserved.
+    </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+
+$(function(){
+
+  //click the link starting with #
+  $('a[href^="#"]').click(function(){
+    //scroll speed (ms)
+    var speed = 500;
+    //get href
+
+    var href = $(this).attr("href");
+
+    //change color
+    $(".link").css('background-color','navy');
+
+
+ if(href != "#contents"){
+
+   $(this).parent("li").css('background-color',
+   'lightseagreen');
+ }
+
+
+
+    //set target
+    var target = $(href == "#" || href == "" ? "html" : href);
+    // get the position of traget
+    var position = target.offset().top;
+    //start animation
+    $("body,html").animate({scrollTop:position},speed, 'swing');
+     return false;
+   });
+});
+
+</script>
+
+
+  </body>
+</html>

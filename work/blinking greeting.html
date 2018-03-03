@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>New Year Greeting</title>
+      <style>
+      body{
+        background-color: skyblue;
+
+      }
+        h1{
+      color: darkblue;
+      margin-top:250px;
+      font-size: 50px;
+      text-align: center;
+
+        }
+      </style>
+  </head>
+  <body>
+    <h1 id="messageLabel"></h1>
+    <script>
+var message = "Happy New Year!!";
+var msgCount = 0;
+var blinkCount = 0;
+var blinkFlg = 0;
+var timer1 , timer2;
+var messageLabel = document.getElementById("messageLabel");
+
+function textFunc() {
+  messageLabel.innerHTML = message.substring(0, msgCount);
+  if(msgCount == message.length){
+clearInterval(timer1);
+
+// start blinking animation;
+  timer2 = setInterval("blinkFunc()",200);
+  }
+else {
+
+    msgCount++;
+  }
+}
+function blinkFunc(){
+
+//blink 5 times.
+
+  if (blinkCount < 6){
+
+    if(blinkFlg == 0)
+    {
+    messageLabel.innerHTML = message;
+    blinkFlg = 1;
+    blinkCount++;
+
+  }else{
+    messageLabel.innerHTML = "";
+    blinkFlg = 0;
+  }
+}else {
+  //stop timer
+
+  clearInterval(timer2);
+}
+
+}
+
+timer1 = setInterval("textFunc()", 150); // every 150 milliseconds
+
+
+</script>
+  </body>
+</html>
